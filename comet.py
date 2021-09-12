@@ -11,7 +11,7 @@ class Comet(pygame.sprite.Sprite):
         self.rect.y = -350
         self.image = pygame.transform.scale(self.image, (200, 300))
         self.velocity = random.randint(3, 6)
-        self.attack = 5
+        self.attack = 3
         
         self.percent = 0
         self.percent_speed = 30
