@@ -27,7 +27,7 @@ class Game:
         self.spawn_monster()
         self.spawn_monster()
         self.spawn_sumo()
-    
+        
     
     def game_over(self):
         # egalement la pause + permet un quick reset
@@ -41,6 +41,7 @@ class Game:
         self.spawn_monster()
         self.spawn_monster()
         self.sound_manager.play('game_over')
+        
         
     def stage_clear(self):
         

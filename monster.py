@@ -7,7 +7,7 @@ class Monster(pygame.sprite.Sprite):
     def __init__(self, game):
         super().__init__()
         self.game = game
-        self.health = 13
+        self.health = 6
         self.max_health = 3
         self.attack = 1
         self.image = pygame.image.load('assets/chirac.png')

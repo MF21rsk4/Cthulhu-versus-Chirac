@@ -25,6 +25,7 @@ screen = pygame.display.set_mode((1100, 800))
 background = pygame.image.load('assets/voila.jpg')
 background.convert()
 
+
 troll = pygame.image.load('assets/chirac.png')
 troll_rect = troll.get_rect()
 troll_rect.x = 400
@@ -63,6 +64,7 @@ while running:
     #appliquer la fenetre, joueur, etc.
         screen.blit(background, (0, -200))
         
+        
     # verifier debut du jeu
         if game.is_playing:
             game.update(screen)
@@ -74,18 +76,20 @@ while running:
             
         if game.player.health <= 5:
             game.game_over()
+
         
-        if game.score >= 17: #17
+        if game.score >= 28: #17
             game.stage_clear()
             screen.blit(yuhane, yuhane_rect)
             game.sound_manager.play('GG')
+            
         
         
-        if game.score == 12:
+        if game.score == 14:
             screen.blit(troll, troll_rect)
             game.sound_manager.play('methode')
             
-        if game.score == 13:
+        if game.score == 15:
             screen.blit(troll, troll_rect)
             #game.sound_manager.play('methode')
             
@@ -116,6 +120,7 @@ while running:
                     
             elif event.type == pygame.KEYUP:
                 game.pressed[event.key] = False
+                
                         
                     
             elif event.type == pygame.MOUSEBUTTONDOWN:
@@ -125,6 +130,11 @@ while running:
                     
                     game.sound_manager.play('click')
                     game.sound_manager.play('theme')
+            
+            # elif event.type == pygame.Escape:
+
+        
+                
                 
                     
 clock.tick(FPS)

@@ -7,7 +7,7 @@ class Sumo(pygame.sprite.Sprite):
     def __init__(self, game):
         super().__init__()
         self.game = game
-        self.health = 23
+        self.health = 8
         self.max_health = 6
         self.attack = 1
         self.image = pygame.image.load('assets/sumo.gif')
